@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Unofficial Launcher for Live2D Cubism Editor aarch64 (+jpen)" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="uk.co.birchlabs.Main" />
+    <module name="launcher" />
+    <option name="VM_PARAMETERS" value="-javaagent:target/dependency/agent.jar --patch-module jdk.unsupported=target/dependency/jdk-unsupported.jar --add-exports java.desktop/com.apple.eawt=ALL-UNNAMED --module-path=target/graal/graal-sdk.jar:target/graal/truffle-api.jar --upgrade-module-path=target/graal/compiler.jar:target/graal/compiler-management.jar -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -XX:+UseJVMCICompiler -XX:+EagerJVMCI -Dgraal.ShowConfiguration=info -Dsun.java2d.metal=true -Xdock:name=&quot;Unofficial Launcher for Live2D Cubism Editor&quot; -Djava.library.path=lib" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/launcher" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="uk.co.birchlabs.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

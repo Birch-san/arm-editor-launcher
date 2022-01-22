@@ -1,0 +1,16 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+/uiDesigner.xml
+/encodings.xml
+
+# inferred from Maven
+/libraries/
+/compiler.xml
+/jarRepositories.xml
+/modules.xml
+/misc.xml
+
+# inferred from Git
+/vcs.xml

@@ -1,0 +1,10 @@
+.DS_Store
+
+# Managed by Maven
+*/*.iml
+*/target/
+
+/mvn/
+
+/jogamp-rc4.zip
+/jogamp-rc4/
