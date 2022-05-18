@@ -13,6 +13,9 @@
         <module>jdk-unsupported</module>
         <module>agent</module>
         <module>launcher</module>
+        <module>license-bridge-common</module>
+        <module>license-bridge-client</module>
+        <module>license-bridge-server</module>
     </modules>
 
     <name>M1 macOS native launcher for Live2D Cubism Editor</name>
@@ -23,7 +26,20 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <graalvm.version>21.3.0</graalvm.version>
+        <cubism-libs>/Applications/Live2D Cubism 4.1/res</cubism-libs>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>rlm1221</groupId>
+                <artifactId>rlm1221</artifactId>
+                <version>1.0</version>
+                <scope>system</scope>
+                <systemPath>${cubism-libs}/rlm1221.jar</systemPath>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <pluginManagement>
