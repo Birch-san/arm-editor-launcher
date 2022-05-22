@@ -6,8 +6,7 @@ _For personal use. Please adhere to the license terms of Live2D Cubism Editor._
 JDK17. arm64-native. Metal. Graal JIT.  
 Fast.
 
-This **unofficial** launcher improves the performance of [Live2D Cubism Editor](https://www.live2d.com/en/download/cubism/) on M1 macOS.  
-It is currently a proof-of-concept (limited to running in Unregistered mode).
+This **unofficial** launcher improves the performance of [Live2D Cubism Editor](https://www.live2d.com/en/download/cubism/) on M1 macOS.
 
 ## Install dependencies
 
