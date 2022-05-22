@@ -226,13 +226,10 @@
             <scope>system</scope>
             <systemPath>${cubism-libs}/opencsv-5.2.jar</systemPath>
         </dependency>
-        <dependency>
-            <groupId>rlm1221</groupId>
-            <artifactId>rlm1221</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${cubism-libs}/rlm1221.jar</systemPath>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>rlm1221</groupId>-->
+<!--            <artifactId>rlm1221</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>tritonus_share</groupId>
             <artifactId>tritonus_share</artifactId>

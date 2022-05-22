@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="BridgeServer x86_64" type="Application" factoryName="Application">
+    <option name="ALTERNATIVE_JRE_PATH" value="/Applications/Live2D Cubism 4.1/jre/Contents/Home/jre" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="MAIN_CLASS_NAME" value="uk.co.birchlabs.license_bridge.server.BridgeServerMain" />
+    <module name="license-bridge-server" />
+    <option name="VM_PARAMETERS" value="-Djava.library.path=&quot;/Applications/Live2D Cubism 4.1/res&quot;" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="uk.co.birchlabs.license_bridge.server.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
