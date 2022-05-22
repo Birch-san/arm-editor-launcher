@@ -6,6 +6,7 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface BridgeServerAPI extends Remote {
+    String healthCheck() throws RemoteException;
     Handle Handle(String licLoc, String appPath, String license) throws RemoteException;
     Handle Handle(String licLoc, String appPath, String license, int promise) throws RemoteException;
     Handle Handle(String licLoc, String appPath, String license, String[] env) throws RemoteException;

@@ -16,6 +16,7 @@
         <module>license-bridge-common</module>
         <module>license-bridge-client</module>
         <module>license-bridge-server</module>
+        <module>license-bridge-server-launcher</module>
     </modules>
 
     <name>M1 macOS native launcher for Live2D Cubism Editor</name>

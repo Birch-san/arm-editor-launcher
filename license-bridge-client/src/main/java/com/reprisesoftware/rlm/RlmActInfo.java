@@ -12,7 +12,7 @@ public class RlmActInfo implements RlmConstants {
 
     public RlmActInfo(RlmHandle rh, String url, String actKey) throws RlmException {
         try {
-            this.peer = BridgeClient.Singleton.api.ActInfo(rh.peer, url, actKey);
+            this.peer = BridgeClient.Singleton.getAPI().ActInfo(rh.peer, url, actKey);
         } catch (RemoteException e) {
             throw new LicenseException(e);
         }

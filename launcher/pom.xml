@@ -69,9 +69,13 @@
         </dependency>
         <dependency>
             <groupId>uk.co.birchlabs.arm-editor</groupId>
+            <artifactId>license-bridge-server-launcher</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>uk.co.birchlabs.arm-editor</groupId>
             <artifactId>license-bridge-client</artifactId>
             <version>${project.parent.version}</version>
-            <scope>runtime</scope>
         </dependency>
     </dependencies>
 

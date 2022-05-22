@@ -1,16 +1,21 @@
 package uk.co.birchlabs.license_bridge.server.domain;
 
 import com.reprisesoftware.rlm.RlmActHandle;
+import com.reprisesoftware.rlm.RlmAvailableProduct;
 import com.reprisesoftware.rlm.RlmException;
 import com.reprisesoftware.rlm.RlmHandle;
 import uk.co.birchlabs.license_bridge.common.domain.ActHandle;
+import uk.co.birchlabs.license_bridge.common.domain.AvailableProduct;
 import uk.co.birchlabs.license_bridge.common.domain.Handle;
+import uk.co.birchlabs.license_bridge.server.registry.ActHandleRegistry.HydrateActHandle;
+import uk.co.birchlabs.license_bridge.server.registry.AvailableProductRegistry;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Vector;
+import java.util.stream.Collectors;
 
 public class HandleImpl extends UnicastRemoteObject implements Handle {
     private static final Method getHandleHandle;
@@ -24,11 +29,6 @@ public class HandleImpl extends UnicastRemoteObject implements Handle {
     }
     private transient final RlmHandle delegate;
     private transient final HydrateActHandle hydrateActHandle;
-
-    @FunctionalInterface
-    public interface HydrateActHandle {
-        RlmActHandle make(ActHandle handle) throws RemoteException;
-    }
 
     public HandleImpl(RlmHandle delegate, HydrateActHandle hydrateActHandle) throws RemoteException {
         super();
@@ -93,8 +93,12 @@ public class HandleImpl extends UnicastRemoteObject implements Handle {
     }
 
     @Override
-    public Vector getAvailableProducts(String product, String version) {
-        return this.delegate.getAvailableProducts(product, version);
+    public Vector<AvailableProduct> getAvailableProducts(String product, String version) throws RemoteException {
+        final Vector<RlmAvailableProduct> vec = (Vector<RlmAvailableProduct>) this.delegate.getAvailableProducts(product, version);
+        return vec.stream()
+                .sequential()
+                .map(AvailableProductRegistry.instance::dessicateUnchecked)
+                .collect(Collectors.toCollection(() -> new Vector<>(vec.size())));
     }
 
     @Override
@@ -153,7 +157,6 @@ public class HandleImpl extends UnicastRemoteObject implements Handle {
 
     @Override
     public String activateLicense(String url, String key, int count, ActHandle actHandle) throws RemoteException {
-//        final RlmActHandle rAH = ActHandleProxy.make(actHandle);
         final RlmActHandle rAH = hydrateActHandle.make(actHandle);
         try {
             return this.delegate.activateLicense(url, key, count, rAH);

@@ -8,6 +8,6 @@ import java.rmi.Naming;
 public class BridgeClientMain {
     public static void main(String args[]) throws Exception {
         BridgeServerAPI server = (BridgeServerAPI)Naming.lookup("//localhost/BridgeServer");
-//        System.out.println(server.getMessage());
+        System.out.println(server.healthCheck());
     }
 }

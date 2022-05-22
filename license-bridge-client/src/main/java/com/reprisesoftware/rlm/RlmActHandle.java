@@ -12,7 +12,7 @@ public class RlmActHandle implements RlmConstants {
 
     public RlmActHandle(RlmHandle rh) {
         try {
-            this.peer = BridgeClient.Singleton.api.ActHandle(rh.peer);
+            this.peer = BridgeClient.Singleton.getAPI().ActHandle(rh.peer);
         } catch (RemoteException e) {
             throw new RuntimeRemoteException(e);
         }

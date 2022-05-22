@@ -22,7 +22,7 @@ public interface Handle extends Remote {
 
     void removeDetachedDemo(String product, String version) throws RemoteException;
 
-    Vector getAvailableProducts(String product, String version) throws RemoteException;
+    Vector<AvailableProduct> getAvailableProducts(String product, String version) throws RemoteException;
 
     void setUser(String user) throws RemoteException;
 

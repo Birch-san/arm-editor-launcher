@@ -10,7 +10,7 @@ public class RlmAvailableProduct implements RlmConstants {
     public final AvailableProduct peer;
     RlmAvailableProduct() {
         try {
-            this.peer = BridgeClient.Singleton.api.AvailableProduct();
+            this.peer = BridgeClient.Singleton.getAPI().AvailableProduct();
         } catch (RemoteException e) {
             throw new RuntimeRemoteException(e);
         }

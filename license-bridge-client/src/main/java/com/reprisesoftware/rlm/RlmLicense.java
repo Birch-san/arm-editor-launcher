@@ -11,7 +11,7 @@ public class RlmLicense implements RlmConstants {
     public final License peer;
     public RlmLicense(RlmHandle handle, String product, String version, int count) throws RlmException {
         try {
-            this.peer = BridgeClient.Singleton.api.License(handle.peer, product, version, count);
+            this.peer = BridgeClient.Singleton.getAPI().License(handle.peer, product, version, count);
         } catch (RemoteException e) {
             throw new LicenseException(e);
         }
@@ -19,7 +19,7 @@ public class RlmLicense implements RlmConstants {
 
     public RlmLicense(RlmHandle handle, RlmAvailableProduct product, String version, int count) throws RlmException {
         try {
-            this.peer = BridgeClient.Singleton.api.License(handle.peer, product.peer, version, count);
+            this.peer = BridgeClient.Singleton.getAPI().License(handle.peer, product.peer, version, count);
         } catch (RemoteException e) {
             throw new LicenseException(e);
         }

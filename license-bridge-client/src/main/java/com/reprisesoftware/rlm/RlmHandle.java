@@ -20,7 +20,7 @@ public class RlmHandle implements RlmConstants {
 
     public RlmHandle(String licLoc, String appPath, String license) throws RlmException {
         try {
-            this.peer = BridgeClient.Singleton.api.Handle(licLoc, appPath, license);
+            this.peer = BridgeClient.Singleton.getAPI().Handle(licLoc, appPath, license);
         } catch (RemoteException e) {
             throw new LicenseException(e);
         }
@@ -28,7 +28,7 @@ public class RlmHandle implements RlmConstants {
 
     public RlmHandle(String licLoc, String appPath, String license, int promise) throws RlmException {
         try {
-            this.peer = BridgeClient.Singleton.api.Handle(licLoc, appPath, license, promise);
+            this.peer = BridgeClient.Singleton.getAPI().Handle(licLoc, appPath, license, promise);
         } catch (RemoteException e) {
             throw new LicenseException(e);
         }
@@ -36,7 +36,7 @@ public class RlmHandle implements RlmConstants {
 
     public RlmHandle(String licLoc, String appPath, String license, String[] env) throws RlmException {
         try {
-            this.peer = BridgeClient.Singleton.api.Handle(licLoc, appPath, license, env);
+            this.peer = BridgeClient.Singleton.getAPI().Handle(licLoc, appPath, license, env);
         } catch (RemoteException e) {
             throw new LicenseException(e);
         }
@@ -44,7 +44,7 @@ public class RlmHandle implements RlmConstants {
 
     public RlmHandle(String licLoc, String appPath, String license, String libName) throws RlmException {
         try {
-            this.peer = BridgeClient.Singleton.api.Handle(licLoc, appPath, license, libName);
+            this.peer = BridgeClient.Singleton.getAPI().Handle(licLoc, appPath, license, libName);
         } catch (RemoteException e) {
             throw new LicenseException(e);
         }
@@ -52,7 +52,7 @@ public class RlmHandle implements RlmConstants {
 
     public RlmHandle(String licLoc, String appPath, String license, String libName, String[] env) throws RlmException {
         try {
-            this.peer = BridgeClient.Singleton.api.Handle(licLoc, appPath, license, libName, env);
+            this.peer = BridgeClient.Singleton.getAPI().Handle(licLoc, appPath, license, libName, env);
         } catch (RemoteException e) {
             throw new LicenseException(e);
         }
