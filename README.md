@@ -34,6 +34,7 @@ Download a maven executable and the jogamp libraries; install them to your local
 
 ```bash
 ./install-maven.sh
+# this is an *example* filepath; update it to match the JDK17 folder you extracted
 JAVA_HOME="$HOME/Downloads/zulu17.30.51-ca-fx-jdk17.0.1-macosx_aarch64" ./install-jogl.sh
 ```
 
@@ -55,6 +56,7 @@ Congratulations! You are now running natively.
 ### Option 2. Install & run from command-line
 
 ```bash
+# this is an *example* filepath; update it to match the JDK17 folder you extracted
 export JAVA_HOME="$HOME/Downloads/zulu17.30.51-ca-fx-jdk17.0.1-macosx_aarch64"
 MVN_HOME="${MVN_HOME:-"./mvn"}"
 MVN="$MVN_HOME/bin/mvn"
