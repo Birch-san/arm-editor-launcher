@@ -19,13 +19,12 @@ Install [Live2D Cubism Editor](https://www.live2d.com/en/download/cubism/) such 
 Install [Azul JDK17](https://www.azul.com/downloads/?version=java-17-lts&os=macos&architecture=arm-64-bit&package=jdk-fx) (ARM 64-bit, with Java FX).  
 Get the `.tar.gz` distribution.
 
-Extract the `.tar.gz` such that a directory structure like the following exists:  
+Extract `zulu17.30.51-ca-fx-jdk17.0.1-macosx_aarch64.tar.gz` (or whatever version you got).
+Rename the resulting folder `zulu17.30.51-ca-fx-jdk17.0.1-macosx_aarch64` to `zulu17-macosx_aarch64`, such that a directory structure like the following exists:  
 
 ```
-~/Downloads/zulu17.30.51-ca-fx-jdk17.0.1-macosx_aarch64/zulu-17.jdk/Contents/Home
+~/Downloads/zulu17-macosx_aarch64/zulu-17.jdk/Contents/Home
 ```
-
-_note: your version number will be newer than the folder in this example._
 
 Clone this repository:
 
@@ -39,7 +38,7 @@ Download a maven executable and the jogamp libraries; install them to your local
 ```bash
 ./install-maven.sh
 # this is an *example* filepath; update it to match the JDK17 folder you extracted
-JAVA_HOME="$HOME/Downloads/zulu17.30.51-ca-fx-jdk17.0.1-macosx_aarch64" ./install-jogl.sh
+JAVA_HOME="$HOME/Downloads/zulu17-macosx_aarch64" ./install-jogl.sh
 ```
 
 ### Option 1. Install & run with IntelliJ
@@ -61,7 +60,7 @@ Congratulations! You are now running natively.
 
 ```bash
 # this is an *example* filepath; update it to match the JDK17 folder you extracted
-export JAVA_HOME="$HOME/Downloads/zulu17.30.51-ca-fx-jdk17.0.1-macosx_aarch64"
+export JAVA_HOME="$HOME/Downloads/zulu17-macosx_aarch64"
 MVN_HOME="${MVN_HOME:-"./mvn"}"
 MVN="$MVN_HOME/bin/mvn"
 "$MVN" install

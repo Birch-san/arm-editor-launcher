@@ -5,13 +5,14 @@ DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 CTRL='\033' # begin escape sequence
 BC="${CTRL}[0;" # begin colour modification
 Red="${BC}31m"
+Purple="${BC}35m"
 Cyan="${BC}36m"
 NC="${BC}0m" # No Color
 
 function print_help {
   >&2 echo -e "${Cyan}Example invocation:${NC}
-# this is an *example* filepath; update it to match the JDK17 folder you extracted
-JAVA_HOME="$HOME/Downloads/zulu17.30.51-ca-fx-jdk17.0.1-macosx_aarch64" ./launcher.sh
+${Purple}# this is an *example* filepath; update it to match the JDK17 folder you extracted${NC}
+JAVA_HOME=\"\$HOME/Downloads/zulu17-macosx_aarch64\" ./launcher.sh
 "
 }
 
