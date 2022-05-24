@@ -17,6 +17,11 @@
             <artifactId>license-bridge-client</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <dependency>
+            <groupId>uk.co.birchlabs.arm-editor</groupId>
+            <artifactId>license-bridge-server</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
