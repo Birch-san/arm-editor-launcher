@@ -10,6 +10,7 @@ NC="${BC}0m" # No Color
 
 function print_help {
   >&2 echo -e "${Cyan}Example invocation:${NC}
+# this is an *example* filepath; update it to match the JDK17 folder you extracted
 JAVA_HOME="$HOME/Downloads/zulu17.30.51-ca-fx-jdk17.0.1-macosx_aarch64" ./launcher.sh
 "
 }
@@ -70,6 +71,10 @@ MVN_LIBS=(
 'javax/activation/activation/1.1.1/activation-1.1.1.jar'
 )
 CLASSPATH=(
+"$DIR/license-bridge-common/target/license-bridge-common-1.0-SNAPSHOT.JAR"
+# deliberately *before* rlm1221.jar; replaces some classes with ones that forward calls to an Intel JVM hosting librlm1221.jnilib
+"$DIR/license-bridge-client/target/license-bridge-client-1.0-SNAPSHOT.JAR"
+"$DIR/license-bridge-server-launcher/target/license-bridge-server-launcher-1.0-SNAPSHOT.JAR"
 "${CUBISM_EDITOR_LIBS[@]/#/$CUBISM_EDITOR_LIB_DIR/}"
 "${MVN_LIBS[@]/#/$M2_REPO/}"
 "$LAUNCHER_LIB_DIR/jpen-2.1-SNAPSHOT.jar"
@@ -82,6 +87,11 @@ NATIVE_LIB_DIRS=(
 #"$LAUNCHER_LIB_DIR"
 )
 NATIVE_LIB_STR=$(IFS=: ; echo "${NATIVE_LIB_DIRS[*]}")
+
+# change working directory to launcher, because it locates license-bridge-server-launcher/target/dependency/license-bridge-*.jar
+# relative to working directory (i.e. expects to be run from this monorepo, with all sibling artifacts packaged)
+# yes I'm aware it would be better to just expose a CLI argument to parameterize this but I dislike making CLIs
+cd "$LAUNCHER_DIR"
 
 exec "$JAVA" \
 -cp "$CLASSPATH_STR" \
