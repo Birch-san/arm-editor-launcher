@@ -12,7 +12,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <cubism-libs>/Applications/Live2D Cubism 4.1/res</cubism-libs>
+        <cubism-libs>/Applications/Live2D Cubism 4.2/res</cubism-libs>
     </properties>
 
     <dependencies>

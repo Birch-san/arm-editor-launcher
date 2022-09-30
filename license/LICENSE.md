@@ -4,7 +4,7 @@ The _launcher_ contributed by this repository is made available under a [3-claus
 
 # [Live2D Cubism Editor](https://www.live2d.com/en/download/cubism/)
 
-See [`Live2D_Cubism_Editor_license.txt`](Live2D_Cubism_Editor_license.txt) for its licensing terms as of Jan 22 2022.
+See [`Live2D_Cubism_Editor_license.html`](Live2D_Cubism_Editor_license.html) for its licensing terms as of Sep 30 2022.
 
 # New dependencies introduced by this launcher
 

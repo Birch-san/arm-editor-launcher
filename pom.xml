@@ -27,7 +27,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <graalvm.version>21.3.0</graalvm.version>
-        <cubism-libs>/Applications/Live2D Cubism 4.1/res</cubism-libs>
+        <cubism-libs>/Applications/Live2D Cubism 4.2/res</cubism-libs>
     </properties>
 
     <dependencyManagement>

@@ -21,7 +21,7 @@ import static java.lang.String.format;
 
 public class BridgeServerLauncher {
     public static Path getInstallDir() {
-        return getInstallDir("4.1");
+        return getInstallDir("4.2");
     }
     public static Path getInstallDir(String version) {
         return Path.of(format("/Applications/Live2D Cubism %s", version));

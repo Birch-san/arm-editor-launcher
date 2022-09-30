@@ -13,7 +13,7 @@ This **unofficial** launcher improves the performance of [Live2D Cubism Editor](
 Install [Live2D Cubism Editor](https://www.live2d.com/en/download/cubism/) such that the following directory exists:
 
 ```
-/Applications/Live2D Cubism 4.1/res
+/Applications/Live2D Cubism 4.2/res
 ```
 
 Install [Azul JDK17](https://www.azul.com/downloads/?version=java-17-lts&os=macos&architecture=arm-64-bit&package=jdk-fx) (ARM 64-bit, with Java FX).  

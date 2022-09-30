@@ -24,7 +24,7 @@ fi
 
 JAVA="$JAVA_HOME/bin/java"
 
-CUBISM_EDITOR_DIR="/Applications/Live2D Cubism 4.1"
+CUBISM_EDITOR_DIR="/Applications/Live2D Cubism 4.2"
 CUBISM_EDITOR_LIB_DIR="$CUBISM_EDITOR_DIR/res"
 LAUNCHER_DIR="$DIR/launcher"
 LAUNCHER_LIB_DIR="$LAUNCHER_DIR/lib"
