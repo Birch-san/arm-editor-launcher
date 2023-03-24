@@ -72,10 +72,10 @@ MVN_LIBS=(
 'javax/activation/activation/1.1.1/activation-1.1.1.jar'
 )
 CLASSPATH=(
-"$DIR/license-bridge-common/target/license-bridge-common-1.0-SNAPSHOT.JAR"
+"$DIR/license-bridge-common/target/license-bridge-common-1.0-SNAPSHOT.jar"
 # deliberately *before* rlm1221.jar; replaces some classes with ones that forward calls to an Intel JVM hosting librlm1221.jnilib
-"$DIR/license-bridge-client/target/license-bridge-client-1.0-SNAPSHOT.JAR"
-"$DIR/license-bridge-server-launcher/target/license-bridge-server-launcher-1.0-SNAPSHOT.JAR"
+"$DIR/license-bridge-client/target/license-bridge-client-1.0-SNAPSHOT.jar"
+"$DIR/license-bridge-server-launcher/target/license-bridge-server-launcher-1.0-SNAPSHOT.jar"
 "${CUBISM_EDITOR_LIBS[@]/#/$CUBISM_EDITOR_LIB_DIR/}"
 "${MVN_LIBS[@]/#/$M2_REPO/}"
 "$LAUNCHER_LIB_DIR/jpen-2.1-SNAPSHOT.jar"
